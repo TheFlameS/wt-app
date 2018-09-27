@@ -1,7 +1,22 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, FlatList } from 'react-native';
 
 const _keyExtractor = item => item.code
+
+const availableZipItems = [
+    { place: 'Hatyai', code: '90110' },
+    { place: 'Trang', code: '92000' },
+    { place: 'Chiangmai', code: '50000' },
+    { place: 'Khonkaen', code: '40000' },
+    { place: 'Chonburi', code: '20000' },
+]
+
+const ZipItem = ({place, code, navigate}) => (
+    <View style={styles.zipItem}>
+        <Text style={styles.zipPlace}>{place}</Text>
+        <Text style={styles.zipCode}>{code}</Text>
+    </View>
+)
 
 export default class WeatherScreen extends React.Component {
     static navigationOptions = ({navigation}) => {
