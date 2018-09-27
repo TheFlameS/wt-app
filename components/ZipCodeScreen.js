@@ -24,3 +24,12 @@ export default class ZipCodeScreen extends React.Component{
         }
     }
 }
+
+const styles = StyleSheet.create({
+    zipItem: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'space-evenly',
+    },
+  });
