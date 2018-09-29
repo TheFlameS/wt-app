@@ -28,6 +28,12 @@ export default class Weather extends React.Component {
   }
    
   componentDidMount = () => this.fetchData()
+
+  componentDidUpdate = (prevProps) => {
+    if (prevProps.zipCode !== this.props.zipCode) {
+      this.fetchData()
+      }
+  }
   
   constructor(props) {
     super(props);
@@ -56,7 +62,7 @@ export default class Weather extends React.Component {
 
 const styles = StyleSheet.create({
   container: { 
-    paddingTop: 24 
+    paddingTop: 0
   },
   backdrop: { 
     width: '100%', 
@@ -66,8 +72,8 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: 24,
-    paddingBottom: 24,
+    paddingTop: 10,
+    paddingBottom: 15,
     backgroundColor:'#000000',
     opacity: 0.5,
   },
