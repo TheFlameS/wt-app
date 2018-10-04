@@ -6,7 +6,7 @@ import Weather from './Weather';
 export default class WeatherScreen extends React.Component {
     static navigationOptions = ({navigation}) => {
         return {
-            headerTitle: (<Text style={styles.topBarLeft}>Choose a zip code</Text>),
+            headerTitle: (<Text style={styles.topBarLeft}>Weather</Text>),
             headerRight: (
                 <Button 
                     title="Change zip" 
